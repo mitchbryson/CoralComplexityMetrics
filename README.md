@@ -47,6 +47,7 @@ area)</li>
 terrain resolutions at which calculations are performed. If this
 Option is not specified, calculations are performed only at the 
 original mesh resolution.</li>
+</ul>
 
 ## Acknowledgements
 
