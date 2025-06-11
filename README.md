@@ -49,12 +49,6 @@ Option is not specified, calculations are performed only at the
 original mesh resolution.</li>
 </ul>
 
-## Acknowledgements
-
-"Coral Complexity Metrics" was developed by Mitch Bryson, Gus Porter and Will Figueira, in a collaboration between the [Australian Centre for Robotics](https://www.sydney.edu.au/engineering/our-research/robotics-and-intelligent-systems/australian-centre-for-robotics.html) and the [School of Life and Environmental Sciences](https://www.sydney.edu.au/science/schools/school-of-life-and-environmental-sciences.html) at the [University of Sydney](https://www.sydney.edu.au/).
-
-"tinyply" was originally developed Dimitri Diakopoulos ([https://github.com/ddiakopoulos/tinyply](https://github.com/ddiakopoulos/tinyply)) and is used to load/save 3D surface models in [PLY](https://en.wikipedia.org/wiki/PLY_(file_format)) format.
-
 # Methods and Calculations:
 
 ## Mesh loading and quadrat creation
@@ -110,4 +104,9 @@ In addition to calculating the metrics at the original mesh data, the program pr
 
 Once the reconstructed mesh is created, the whole suit of metrics (vertical relief, slope distribution, rugosity etc.) are calculated over this new mesh. Plane-of-best fit coordinates for the whole mesh and quadrats are kept from those calculated from the original mesh scale when calculating plane-of-best-fit metrics.
 
+## Acknowledgements
+
+"Coral Complexity Metrics" was developed by Mitch Bryson, Gus Porter and Will Figueira, in a collaboration between the [Australian Centre for Robotics](https://www.sydney.edu.au/engineering/our-research/robotics-and-intelligent-systems/australian-centre-for-robotics.html) and the [School of Life and Environmental Sciences](https://www.sydney.edu.au/science/schools/school-of-life-and-environmental-sciences.html) at the [University of Sydney](https://www.sydney.edu.au/).
+
+"tinyply" was originally developed Dimitri Diakopoulos ([https://github.com/ddiakopoulos/tinyply](https://github.com/ddiakopoulos/tinyply)) and is used to load/save 3D surface models in [PLY](https://en.wikipedia.org/wiki/PLY_(file_format)) format.
 
