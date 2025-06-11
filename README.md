@@ -76,11 +76,11 @@ $$N_x = (v_{y2}-v_{y1})(v_{z3}-v_{z1}) - (v_{z2}-v_{z1})(v_{y3}-v_{y1})$$
 $$N_y = (v_{z2}-v_{z1})(v_{x3}-v_{x1}) - (v_{x2}-v_{x1})(v_{z3}-v_{z1})$$
 $$N_z = (v_{x2}-v_{x1})(v_{y3}-v_{y1}) - (v_{y2}-v_{y1})(v_{x3}-v_{x1})$$
 
-$$\mathbf{N} = \frac{1}{\sqrt{N_x^2 + N_y^2 +N_z^2}}[N_x,N_y,Nz]$$
+$$\bf{N} = \frac{1}{\sqrt{N_x^2 + N_y^2 +N_z^2}}[N_x,N_y,N_z]$$
 
-Where $v_{xi}$, $v_{yi}$, $v_{zi}$ correspond to the X-Y-Z coordinates of a triangle vertices $i$, where $i = {1,2,3}$. The angle between this vector and the z-axis of the original mesh coordinate system (positive upwards) is calculated (the face’s vertical angle XXX):
+Where $v_{xi}$, $v_{yi}$, $v_{zi}$ correspond to the X-Y-Z coordinates of a triangle vertices $i$, where $i = {1,2,3}$. The angle between this vector and the z-axis of the original mesh coordinate system (positive upwards) is calculated (the face’s vertical angle $\theta$):
 
-TODO
+$$\theta = \cos^{-1}\N_z$$
 
 A histogram of these angles is computed in 10 degree bins for each triangle contained within the measurement subset corresponding to either the whole mesh or per-quadrat calculation.
 
