@@ -72,7 +72,7 @@ The mean height, height range (difference between maximum and minimum) and heigh
 ## Calculation of slope/vertical angle distribution
 For the whole mesh and for each quadrat, a histogram of surface vertical angle distribution is calculated by analysing the slopes of each individual triangle. For each triangle of the mesh, a 3D normal vector N is calculated based on the coordinate of each vertex in the triangle:
 
-TODO
+$$N_x = (v_{y2}-v_{y1})(v_{z3}-v_{z1}) - (v_{z2}-v_{z1})(v_{y3}-v_{y1})$$
 
 Where vxi, vyi, vzi correspond to the X-Y-Z coordinates of a triangle vertices i, where i = {1,2,3}. The angle between this vector and the z-axis of the original mesh coordinate system (positive upwards) is calculated (the face’s vertical angle XXX):
 
