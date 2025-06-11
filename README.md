@@ -1,6 +1,8 @@
 # Coral Complexity Metrics
 A free software tool for computing structural complexity metrics over 3D digital surface models
 
+!(/media/coral_banner.jpg)
+
 ## Introduction
 "complexitymetrics" is a free command line tool that computes a variety of structural complexity metrics over triangulated surface models of landscapes, constructed for example by using structure from motion. It accepts models in ply format and allows the user to specify regularly spaced square quadrats for which different measurements can be made. The program returns a csv formatted file which contains metrics including mean rugosity, mean and variance of height, mean slope and distribution of slope angles and topographic surface area. The software allows the user to specify a list of measurement scales (spatial resolutions) at which calculations are performed, allowing for the derivation of size-dependant complexity parameters such as fractal dimension.
 
