@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/29b5cefa-8427-4c54-b9d9-f157121052f5)![image](https://github.com/user-attachments/assets/9ef21aa7-1bac-4fd1-969e-dd725300d45a)# Coral Complexity Metrics
+# Coral Complexity Metrics
 A free software tool for computing structural complexity metrics over 3D digital surface models
 
 ![](/media/coral_banner.jpg)
