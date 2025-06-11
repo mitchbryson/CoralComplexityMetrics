@@ -30,8 +30,9 @@ Dependancies: cmake, GSL (GNU Scientific Library)
 A pre-compiled version of the tool as a Windows executable is provided as a zip including library files is available [here](https://github.com/mitchbryson/CoralComplexityMetrics/blob/main/windows_builds/complexitymetrics1.0.0_windows.zip).
 
 ## Usage from the command line
-
+```console
 complexitymetrics <plyfile> <quadrat_size> <spacing> <output_dir> <Quad Keep Area Ratio Threshold [optional]> <resolutions.txt [optional]>
+```
 
 <ul>
       <li>plyfile: a triangulated surface model in ply format.</li>
