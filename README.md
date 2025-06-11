@@ -11,9 +11,9 @@ A free software tool for computing structural complexity metrics over 3D digital
 If you use this tool in academic research, please consider citing:
 ```bibtex
 @misc{CCM_brysonetal_github,
-      title={Coral Complexity Metrics: A free software tool for computing structural complexity metrics over 3D digital surface models}, 
-      author={Mitch Bryson and Gus Porter and Will Figueira},
-      year={2025},
+      title = {Coral Complexity Metrics: A free software tool for computing structural complexity metrics over 3D digital surface models}, 
+      author = {Mitch Bryson and Gus Porter and Will Figueira},
+      year = {2025},
       publisher = {GitHub},
       journal = {GitHub repository},
       howpublished = {\url{https://github.com/mitchbryson/CoralComplexityMetrics}},
