@@ -76,26 +76,32 @@ $$N_x = (v_{y2}-v_{y1})(v_{z3}-v_{z1}) - (v_{z2}-v_{z1})(v_{y3}-v_{y1})$$
 $$N_y = (v_{z2}-v_{z1})(v_{x3}-v_{x1}) - (v_{x2}-v_{x1})(v_{z3}-v_{z1})$$
 $$N_z = (v_{x2}-v_{x1})(v_{y3}-v_{y1}) - (v_{y2}-v_{y1})(v_{x3}-v_{x1})$$
 
-$$\bf{N} = \frac{1}{\sqrt{N_x^2 + N_y^2 +N_z^2}}[N_x,N_y,N_z]$$
+$$N = \frac{1}{\sqrt{N_x^2 + N_y^2 +N_z^2}}[N_x, N_y, N_z]$$
 
 Where $v_{xi}$, $v_{yi}$, $v_{zi}$ correspond to the X-Y-Z coordinates of a triangle vertices $i$, where $i = {1,2,3}$. The angle between this vector and the z-axis of the original mesh coordinate system (positive upwards) is calculated (the face’s vertical angle $\theta$):
 
-$$\theta = \cos^{-1}\N_z$$
+$$\theta = \cos^{-1}N_z$$
 
 A histogram of these angles is computed in 10 degree bins for each triangle contained within the measurement subset corresponding to either the whole mesh or per-quadrat calculation.
 
 ## Calculation of area metrics and rugosity
-For the whole mesh and then for each of the quadrats, a range of metrics corresponding to surface area and rugosity are calculated. The total 3D area of the surface (A3D) is calculated by summing the areas of the individual triangles (indexed by j) in 3D space:
+For the whole mesh and then for each of the quadrats, a range of metrics corresponding to surface area and rugosity are calculated. The total 3D area of the surface ($A_{3D}$) is calculated by summing the areas of the individual triangles (indexed by j) in 3D space:
 
-TODO
+$$A_{3D} = \sum_{i=1}^n A_{3D,j}$$
+$$A_{3D,j} = d_{avg}(d_{avg}-d_1)(d_{avg}-d_2)(d_{avg}-d_3)$$
+$$d_{avg} = \frac{1}{3}(d_1 + d_2 + d_3)$$
 
-Where d1, d2, d3 are the triangle edge lengths and vxi, vyi, vzi correspond to the X-Y-Z coordinates of a triangle vertices. 
+$$d_1 = \sqrt{(v_{x2}-v_{x1})^2 + (v_{y2}-v_{y1})^2 + (v_{z2}-v_{z1})^2}$$
+$$d_2 = \sqrt{(v_{x3}-v_{x2})^2 + (v_{y3}-v_{y2})^2 + (v_{z3}-v_{z2})^2}$$
+$$d_3 = \sqrt{(v_{x1}-v_{x3})^2 + (v_{y1}-v_{y3})^2 + (v_{z1}-v_{z3})^2}$$
+
+Where $d_1$, $d_2$, $d_3$ are the triangle edge lengths and $v_{xi}$, $v_{yi}$, $v_{zi}$ correspond to the X-Y-Z coordinates of a triangle's vertices. 
 
 The total 2D projected area of the surface (A2D) is calculated by summing the total X-Y planar area occupied by the triangles when the z-axis values of each vertex are set to zero. In order to avoid double counting projected area corresponding to multiple triangles occupying the same X-Y coordinates (i.e. both the upper and lower surface of an overhanging surface, for which both parts of the surface occupy the same X-Y coordinates), a rasterised occupancy grid of the surface in the horizontal plane is computed (with a 100-by-100 grid resolution). The occupancy of each cell in the grid is set to “occupied” if there exists a triangle in the surface model such that the cell coordinate lies inside the X-Y coordinates of the triangle itself. Once each cell has been assessed, the 2D area is calculated by summing the number of occupied cells, dividing by the total number of cells and multiplying by the total area of the square quadrat.
 
-Areal rugosity (r) for the surface is then calculated as the ratio between the 2D and 3D surface areas:
+Areal rugosity ($r$) for the surface is then calculated as the ratio between the 2D and 3D surface areas:
 
-TODO
+$$r = \frac{A_{2D}}{A_{3D}}$$
 
 Values for 3D area, 2D projected area and rugosity are also computed based on the plane-of-best-fit coordinates for the whole mesh or each quadrat. A coordinate transformation is applied to each vertex in the mesh in order to place its coordinates in an X-Y-Z reference corresponding to the plane-of-best-fit, before calculating the metrics as described above.
 
